@@ -1,0 +1,101 @@
+[07-May-2017 17:59:42 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class \app\memo\control\index does not exist' in E:\workspace\php\dog\dog\App.php:25
+Stack trace:
+#0 E:\workspace\php\dog\dog\App.php(25): ReflectionClass->__construct('\\app\\memo\\contr...')
+#1 E:\workspace\php\dog\dog\Core.php(17): dog\App::run()
+#2 E:\workspace\php\dog\index.php(13): require('E:\\workspace\\ph...')
+#3 {main}
+  thrown in E:\workspace\php\dog\dog\App.php on line 25
+[07-May-2017 18:00:04 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Method index does not exist' in E:\workspace\php\dog\dog\App.php:28
+Stack trace:
+#0 E:\workspace\php\dog\dog\App.php(28): ReflectionClass->getMethod('index')
+#1 E:\workspace\php\dog\dog\Core.php(17): dog\App::run()
+#2 E:\workspace\php\dog\index.php(13): require('E:\\workspace\\ph...')
+#3 {main}
+  thrown in E:\workspace\php\dog\dog\App.php on line 28
+[07-May-2017 18:03:46 Asia/Shanghai] PHP Warning:  require(E:\workspace\php\dog\view\memo_editphp): failed to open stream: No such file or directory in E:\workspace\php\dog\app\memo\control\Admin.php on line 13
+[07-May-2017 18:03:46 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required 'E:\workspace\php\dog\view\memo_editphp' (include_path='.;C:\php\pear') in E:\workspace\php\dog\app\memo\control\Admin.php on line 13
+[07-May-2017 18:04:15 Asia/Shanghai] PHP Notice:  Undefined index: PATH_INFO in E:\workspace\php\dog\dog\App.php on line 19
+[07-May-2017 18:04:15 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class \app\index\control\index does not exist' in E:\workspace\php\dog\dog\App.php:25
+Stack trace:
+#0 E:\workspace\php\dog\dog\App.php(25): ReflectionClass->__construct('\\app\\index\\cont...')
+#1 E:\workspace\php\dog\dog\Core.php(19): dog\App::run()
+#2 E:\workspace\php\dog\index.php(13): require('E:\\workspace\\ph...')
+#3 {main}
+  thrown in E:\workspace\php\dog\dog\App.php on line 25
+[07-May-2017 18:04:15 Asia/Shanghai] PHP Notice:  Undefined index: PATH_INFO in E:\workspace\php\dog\dog\App.php on line 19
+[07-May-2017 18:04:15 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class \app\index\control\index does not exist' in E:\workspace\php\dog\dog\App.php:25
+Stack trace:
+#0 E:\workspace\php\dog\dog\App.php(25): ReflectionClass->__construct('\\app\\index\\cont...')
+#1 E:\workspace\php\dog\dog\Core.php(19): dog\App::run()
+#2 E:\workspace\php\dog\index.php(13): require('E:\\workspace\\ph...')
+#3 {main}
+  thrown in E:\workspace\php\dog\dog\App.php on line 25
+[07-May-2017 18:04:15 Asia/Shanghai] PHP Notice:  Undefined index: PATH_INFO in E:\workspace\php\dog\dog\App.php on line 19
+[07-May-2017 18:04:15 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class \app\index\control\index does not exist' in E:\workspace\php\dog\dog\App.php:25
+Stack trace:
+#0 E:\workspace\php\dog\dog\App.php(25): ReflectionClass->__construct('\\app\\index\\cont...')
+#1 E:\workspace\php\dog\dog\Core.php(19): dog\App::run()
+#2 E:\workspace\php\dog\index.php(13): require('E:\\workspace\\ph...')
+#3 {main}
+  thrown in E:\workspace\php\dog\dog\App.php on line 25
+[07-May-2017 18:04:16 Asia/Shanghai] PHP Notice:  Undefined index: PATH_INFO in E:\workspace\php\dog\dog\App.php on line 19
+[07-May-2017 18:04:16 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class \app\index\control\index does not exist' in E:\workspace\php\dog\dog\App.php:25
+Stack trace:
+#0 E:\workspace\php\dog\dog\App.php(25): ReflectionClass->__construct('\\app\\index\\cont...')
+#1 E:\workspace\php\dog\dog\Core.php(19): dog\App::run()
+#2 E:\workspace\php\dog\index.php(13): require('E:\\workspace\\ph...')
+#3 {main}
+  thrown in E:\workspace\php\dog\dog\App.php on line 25
+[07-May-2017 18:14:24 Asia/Shanghai] PHP Notice:  Undefined index: memo_id in E:\workspace\php\dog\dog\Control.php on line 10
+[07-May-2017 18:14:25 Asia/Shanghai] PHP Notice:  Undefined index: memo_id in E:\workspace\php\dog\dog\Control.php on line 10
+[07-May-2017 18:15:47 Asia/Shanghai] PHP Parse error:  syntax error, unexpected 'new' (T_NEW) in E:\workspace\php\dog\dog\Control.php on line 5
+[07-May-2017 18:22:38 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 13
+[07-May-2017 18:22:38 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 16
+[07-May-2017 18:22:39 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 13
+[07-May-2017 18:22:39 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 16
+[07-May-2017 18:22:39 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 13
+[07-May-2017 18:22:39 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 16
+[07-May-2017 18:22:39 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 13
+[07-May-2017 18:22:39 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 16
+[07-May-2017 18:22:40 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 13
+[07-May-2017 18:22:40 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 16
+[07-May-2017 18:22:41 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 13
+[07-May-2017 18:22:41 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 16
+[07-May-2017 18:22:42 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 13
+[07-May-2017 18:22:42 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 16
+[07-May-2017 19:37:28 Asia/Shanghai] PHP Notice:  Undefined index: PATH_INFO in E:\workspace\php\dog\dog\App.php on line 19
+[07-May-2017 19:37:28 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class \app\index\control\index does not exist' in E:\workspace\php\dog\dog\App.php:25
+Stack trace:
+#0 E:\workspace\php\dog\dog\App.php(25): ReflectionClass->__construct('\\app\\index\\cont...')
+#1 E:\workspace\php\dog\dog\Core.php(19): dog\App::run()
+#2 E:\workspace\php\dog\index.php(13): require('E:\\workspace\\ph...')
+#3 {main}
+  thrown in E:\workspace\php\dog\dog\App.php on line 25
+[07-May-2017 19:38:36 Asia/Shanghai] PHP Warning:  require(E:\workspace\php\dog\view\memo_save.php): failed to open stream: No such file or directory in E:\workspace\php\dog\app\memo\control\Admin.php on line 25
+[07-May-2017 19:38:36 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required 'E:\workspace\php\dog\view\memo_save.php' (include_path='.;C:\php\pear') in E:\workspace\php\dog\app\memo\control\Admin.php on line 25
+[07-May-2017 19:38:42 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Method abi does not exist' in E:\workspace\php\dog\dog\App.php:28
+Stack trace:
+#0 E:\workspace\php\dog\dog\App.php(28): ReflectionClass->getMethod('abi')
+#1 E:\workspace\php\dog\dog\Core.php(19): dog\App::run()
+#2 E:\workspace\php\dog\index.php(13): require('E:\\workspace\\ph...')
+#3 {main}
+  thrown in E:\workspace\php\dog\dog\App.php on line 28
+[07-May-2017 19:39:05 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Method abi does not exist' in E:\workspace\php\dog\dog\App.php:28
+Stack trace:
+#0 E:\workspace\php\dog\dog\App.php(28): ReflectionClass->getMethod('abi')
+#1 E:\workspace\php\dog\dog\Core.php(19): dog\App::run()
+#2 E:\workspace\php\dog\index.php(13): require('E:\\workspace\\ph...')
+#3 {main}
+  thrown in E:\workspace\php\dog\dog\App.php on line 28
+[07-May-2017 19:39:14 Asia/Shanghai] PHP Warning:  require(E:\workspace\php\dog\view\memo_save.php): failed to open stream: No such file or directory in E:\workspace\php\dog\app\memo\control\Admin.php on line 25
+[07-May-2017 19:39:14 Asia/Shanghai] PHP Fatal error:  require(): Failed opening required 'E:\workspace\php\dog\view\memo_save.php' (include_path='.;C:\php\pear') in E:\workspace\php\dog\app\memo\control\Admin.php on line 25
+[07-May-2017 19:39:48 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 10
+[07-May-2017 19:39:48 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 13
+[07-May-2017 19:39:48 Asia/Shanghai] PHP Notice:  Undefined variable: data in E:\workspace\php\dog\view\memo_edit.php on line 16
+[07-May-2017 22:36:27 Asia/Shanghai] PHP Notice:  Undefined index: tag_names in E:\workspace\php\dog\app\memo\control\Admin.php on line 24
+[07-May-2017 22:37:40 Asia/Shanghai] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in E:\workspace\php\dog\dog\db\Db.php on line 28
+[07-May-2017 22:40:41 Asia/Shanghai] PHP Notice:  Undefined index: tag_id in E:\workspace\php\dog\app\memo\control\Admin.php on line 40
+[07-May-2017 23:11:27 Asia/Shanghai] PHP Warning:  sprintf(): Too few arguments in E:\workspace\php\dog\dog\db\Db.php on line 42
+[07-May-2017 23:11:27 Asia/Shanghai] PHP Warning:  mysqli_query(): Empty query in E:\workspace\php\dog\dog\db\Db.php on line 52
+[07-May-2017 23:18:39 Asia/Shanghai] PHP Notice:  Undefined index: PATH_INFO in E:\workspace\php\dog\dog\App.php on line 19
+[07-May-2017 23:24:47 Asia/Shanghai] PHP Notice:  Undefined index: title in E:\workspace\php\dog\view\index.php on line 9
