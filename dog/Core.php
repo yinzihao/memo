@@ -1,5 +1,4 @@
 <?php
-
 /**
  * 框架核心初始化
  * @author Frank
@@ -11,7 +10,7 @@ define('LIBRARY_PATH', __DIR__.DS.'library'.DS);
 define('CORE_PATH_FILENAME', DOG_PATH.'Core.php');
 
 define('VIEW_PATH', dirname(__DIR__).DS.'view'.DS);
-
+define('ROOT_PATH', dirname(__DIR__).DS.'lib'.DS);
 require LIBRARY_PATH.'Loader.php';
 require DOG_PATH.'App.php';
 

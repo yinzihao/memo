@@ -1,6 +1,5 @@
-<?php
+<?php 
 namespace dog\db;
-
 class Db
 {
 	private $host = null;
@@ -11,10 +10,11 @@ class Db
 	
 	public static $db_con = null;
 	
-	public function __construct($host = '127.0.0.1',$username = 'root',$password = 'root',$dbname = 'memory',$port=3306)
+	public function __construct($host = '127.0.0.1',$username = 'root',$password = '',$dbname = 'memo',$port=3306)
 	{
 		if(!self::$db_con){
 			self::$db_con = mysqli_connect($host,$username,$password,$dbname,$port);
+			mysqli_set_charset(self::$db_con, "utf8");
 			if (mysqli_connect_errno(self::$db_con)){
 				throw new \Exception("连接 MySQL 失败: " . mysqli_connect_error());	
 			}
