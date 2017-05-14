@@ -4,7 +4,8 @@
 <html>
 	<head></head>
 	<body>
-		<form action="memo_save" method="get" >
+		<form action="memo_save" method="post" >
+			<input type="hidden" name="memo_id" value="<?=$data['memo_id'] ?>" />
 			<table>
 				<tr>
 					<td>标题</td><td> <input type="text" value="<?=$data['memo_title'] ?>" name="memo_title" /> </td>

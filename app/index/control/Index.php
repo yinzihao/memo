@@ -27,7 +27,7 @@ class Index extends Control{
 
 		echo '<pre>';
 		
-		print_r($result);
+		print_r($sphinx->GetLastError());
 		echo 123;
 		echo '</pre>';
 		

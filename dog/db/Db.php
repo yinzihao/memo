@@ -10,7 +10,7 @@ class Db
 	
 	public static $db_con = null;
 	
-	public function __construct($host = '127.0.0.1',$username = 'root',$password = '',$dbname = 'memo',$port=3306)
+	public function __construct($host = '127.0.0.1',$username = 'root',$password = 'root',$dbname = 'memory',$port=3306)
 	{
 		if(!self::$db_con){
 			self::$db_con = mysqli_connect($host,$username,$password,$dbname,$port);
@@ -29,6 +29,12 @@ class Db
 			$data[] = $row;
   		}
 		return $data;
+	}
+	
+	public function find($sql)
+	{
+		$result = mysqli_query(self::$db_con,$sql);
+		return mysqli_fetch_assoc($result);
 	}
 	
 	public function delte($table,$where){

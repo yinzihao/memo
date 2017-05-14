@@ -21,4 +21,5 @@ class Control{
 		if(!isset($this->_request[$key])) return false;
 		return true;
 	}
+	
 }

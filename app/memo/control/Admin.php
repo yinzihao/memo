@@ -2,19 +2,23 @@
 namespace app\memo\control;
 use dog\Control;
 use dog\db\Db;
-class Admin extends Control{
+class Admin extends Base{
 	
-	public function memo_list(){
-		echo VIEW_PATH;
+	public function index(){
+		$data = $this->db->select('select * from m_memo');
+		$this->assign('data', $data);
+		$this->view(__FUNCTION__);
 	}
 	
 	public function memo_edit(){
 		$memo_id = $this->get_value('memo_id');
-		$data = null;
+		$data = array('memo_id' => '','memo_title' => '','memo_content' => '','tag_names' => '');
+		
 		if( !empty($memo_id)){
-			$data = $this->db->select('select * from m_memo where id ='.$memo_id);	
+			$data = $this->db->find('select * from m_memo where memo_id ='.$memo_id);	
 		}
-		require VIEW_PATH.__FUNCTION__.'.php';
+		$this->assign('data', $data);
+		$this->view(__FUNCTION__);
 	}
 	
 	public function memo_save(){
@@ -33,6 +37,13 @@ class Admin extends Control{
 	private function _save_tags($memo_id,$tag_names){
 		if(!empty($tag_names)){
 			$tags = explode(',', trim($tag_names));
+			
+			foreach ($tags as $key => $value){
+				$tags[$key] = ucwords(strtolower($value));
+			}
+			
+			$tags = array_unique($tags);
+			
 			$tag_ids_arr = [];
 			$tag_names_arr = [];
 			$this->db->delte('m_tag_map', "memo_id = $memo_id ");
