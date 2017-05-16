@@ -19,7 +19,8 @@ class Index extends Base{
 			
 			//设置返回结果集为php数组格式
 			$sphinx->SetArrayResult ( true );
-			
+			//分词，收集分词任何部分检索的结果
+			$sphinx->SetMatchMode(SPH_MATCH_ANY);  
 			//匹配结果的偏移量，参数的意义依次为：起始位置，返回结果条数，最大匹配条数
 			$sphinx->SetLimits(0, 20, 1000);
 			

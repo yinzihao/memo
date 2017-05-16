@@ -30,6 +30,10 @@ class Admin extends Base{
 			$this->request['data_time'] = $time;
 			$memo_id = $this->db->insert('m_memo', $this->request);	
 			$this->_save_tags($memo_id, $this->request['tag_names']);
+		}else{
+			$this->request['update_time'] = $time;
+			$this->db->update('m_memo', $this->request, 'memo_id='.$memo_id);
+			$this->_save_tags($memo_id, $this->request['tag_names']);
 		}
 		return 'success';
 	}

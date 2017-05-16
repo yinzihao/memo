@@ -18,7 +18,7 @@
 		</div>
 		<div class="form-group">
 			<label for="memo_content">内容</label> 
-			<textarea class="form-control" rows="3" id="memo_content" name="memo_content" value="<?=$data['memo_content'] ?>" placeholder="内容"></textarea>
+			<textarea class="form-control" rows="3" id="memo_content" name="memo_content" placeholder="内容"><?=$data['memo_content'] ?></textarea>
 		</div>
 		<div class="form-group">
 			<label for="tag_names">标签(多个用逗号隔开)</label> 
