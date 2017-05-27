@@ -11,6 +11,8 @@ define('CORE_PATH_FILENAME', DOG_PATH.'Core.php');
 
 define('VIEW_PATH', dirname(__DIR__).DS.'view'.DS);
 define('ROOT_PATH', dirname(__DIR__).DS.'lib'.DS);
+define('STATIC_PATH', '/static'.DS);
+define('UPLOAD_PATH', dirname(__DIR__).DS.'upload'.DS);
 require LIBRARY_PATH.'Loader.php';
 require DOG_PATH.'App.php';
 
