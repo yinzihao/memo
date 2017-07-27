@@ -4,6 +4,17 @@ use dog\Control;
 class Index {
 	public function index(){
 		
+		$nab_data = [
+				'2017' => 
+					[
+						'DJ5'   => 'http://sportswebapi.qq.com/kbs/matchStat?from=nba_database&selectParams=teamRank,periodGoals,playerStats,nbaPlayerMatchTotal,maxPlayers&mid=100000:1470064&_=1495761499386',
+						'G1' 	=> 'http://sportswebapi.qq.com/kbs/matchStat?from=nba_database&selectParams=teamRank,periodGoals,playerStats,nbaPlayerMatchTotal,maxPlayers&mid=100000:1470067&_=1496365647437',
+						'G2'    => 'http://sportswebapi.qq.com/kbs/matchStat?from=nba_database&selectParams=teamRank,periodGoals,playerStats,nbaPlayerMatchTotal,maxPlayers&mid=100000:1470068&_=1496622817388',
+					 	'G3'    => 'http://sportswebapi.qq.com/kbs/matchStat?from=nba_database&selectParams=teamRank,periodGoals,playerStats,nbaPlayerMatchTotal,maxPlayers&mid=100000:1470069&_=1496885406873'				
+					]
+		];
+		$url = $nab_data[$_REQUEST['year']][$_REQUEST['match']];
+		
 		//字符串不足自动补充
 		/* $str = ' abc ';
 		$newStr= str_pad($str, 10, " ", STR_PAD_RIGHT);
@@ -15,7 +26,6 @@ class Index {
 
 
 		//$url = 'http://sportswebapi.qq.com/kbs/matchStat?from=nba_database&selectParams=teamRank,periodGoals,playerStats,nbaPlayerMatchTotal,maxPlayers&mid=100000:1470064&callback=jQuery11130795900823682751_1495761499385&_=1495761499386';
-		$url ='http://sportswebapi.qq.com/kbs/matchStat?from=nba_database&selectParams=teamRank,periodGoals,playerStats,nbaPlayerMatchTotal,maxPlayers&mid=100000:1470064&_=1495761499386';
 		//初始化
 	    $curl = curl_init();
 	    //设置抓取的url
@@ -65,7 +75,7 @@ class Index {
 	   echo ("<script type=\"text/javascript\">");
 	   echo ("function fresh_page()");
 	   echo ("{");
-	   echo ("window.location.href='$_SERVER[PHP_SELF]?date=$now_date';");
+	   echo ("window.location.href='$_SERVER[PHP_SELF]?year=$_REQUEST[year]&match=$_REQUEST[match]&date=$now_date';");
 	   echo ("}");
 	   echo ("setTimeout('fresh_page()',60000);");
 	   echo ("</script>");

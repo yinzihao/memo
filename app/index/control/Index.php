@@ -1,9 +1,11 @@
 <?php
 namespace app\index\control;
 use dog\Control;
+use dog\Config;
 class Index extends Base{
 	
 	public function index(){
+		header("Content-type: text/html; charset=utf-8");
 		include ROOT_PATH.'sphinxapi.php';
 		
 		$keyword = empty($_REQUEST['keyword'])?'':$_REQUEST['keyword'];
@@ -15,7 +17,7 @@ class Index extends Base{
 			$sphinx = new \SphinxClient();
 			
 			//sphinx的主机名和端口
-			$sphinx->SetServer ('10.37.2.114',9312);
+			$sphinx->SetServer (Config::get('sphinx.host'),Config::get('sphinx.port'));
 			
 			//设置返回结果集为php数组格式
 			$sphinx->SetArrayResult ( true );
@@ -30,7 +32,6 @@ class Index extends Base{
 			$index = 'test1';//索引源是配置文件中的 index 类，如果有多个索引源可使用,号隔开：'email,diary' 或者使用'*'号代表全部索引源
 			
 			$result = $sphinx->Query($keyword, $index);
-			
 			if(!empty($result['matches'])){
 				$data = $result['matches'];
 			}

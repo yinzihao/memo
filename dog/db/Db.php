@@ -1,5 +1,6 @@
 <?php 
 namespace dog\db;
+use dog\Config;
 class Db
 {
 	private $host = null;
@@ -10,9 +11,14 @@ class Db
 	
 	public static $db_con = null;
 	
-	public function __construct($host = '127.0.0.1',$username = 'root',$password = 'root',$dbname = 'memory',$port=3306)
+	public function __construct($host = '',$username = '',$password = '',$dbname = '',$port='')
 	{
 		if(!self::$db_con){
+			if(empty($host)) $host = Config::get('mysql.host');
+			if(empty($port)) $port = Config::get('mysql.port');
+			if(empty($username)) $username = Config::get('mysql.username');
+			if(empty($password)) $password = Config::get('mysql.password');
+			if(empty($dbname)) $dbname = Config::get('mysql.dbname');
 			self::$db_con = mysqli_connect($host,$username,$password,$dbname,$port);
 			mysqli_set_charset(self::$db_con, "utf8");
 			if (mysqli_connect_errno(self::$db_con)){
