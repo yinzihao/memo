@@ -80,7 +80,9 @@ class Db
 			$values = substr($values, 1,strlen($values));
 		
 		$sql = sprintf($sql,$files,$values);
-		mysqli_query(self::$db_con, $sql);
+		if(!mysqli_query(self::$db_con, $sql)){
+			throw new \Exception(mysqli_error(self::$db_con));
+		}
 		return mysqli_insert_id(self::$db_con);
 	}
 }
